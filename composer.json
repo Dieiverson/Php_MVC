@@ -1,0 +1,16 @@
+{
+    "name": "computer/sim_contenda",
+    "description": "Projeto de um sistema de inspe\u0000\u0000o municipal desenvolvido utilizando o padr\u0000o MVC e a linguagem PHP+JS",
+    "authors": [{
+        "name": "Dieiverson Kava",
+        "email": "dieiverson@computerroom.com.br"
+    }],
+    "require": {
+        "twig/twig": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    }
+}
