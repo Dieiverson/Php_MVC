@@ -1,8 +1,8 @@
 {% extends 'partials/body.twig.php' %}
-{% block title %}Home - Exemplo PHP MVC{% endblock %}
+{% block title %}Contato - Exemplo PHP MVC{% endblock %}
 {% block body %}
 <div>
-    <h1>Home Page</h1>
+    <h1>Contato</h1>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit unde vitae vero quo ratione architecto quisquam natus optio cupiditate nihil! Hic, iste a adipisci aspernatur suscipit dolorem tempore quos repudiandae?</p>
 </div>
 {% endblock %}

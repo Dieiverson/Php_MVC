@@ -6,7 +6,6 @@ class RouterCore
 {
     private $uri;
     private $method;
-
     private $getArr = [];
     
     public function __construct()
@@ -69,7 +68,35 @@ class RouterCore
                   $get['call']();
                   break;
               }
+              else {
+                  $this->executeController($get['call']);
+              }
         }
+    }
+
+    private function executeController($get)
+    {
+        
+        $ex = explode('@',$get);
+       
+        if(!isset($ex[0]) || !isset($ex[1]))
+        {
+            (new \app\controller\DefaultController)->message404('Erro 404','Página não encontrada!' , 404);
+            return;
+        }
+        $cont = 'app\\controller\\' . $ex[0];
+        if(!class_exists($cont) || !method_exists($cont,$ex[1]))
+        {
+            (new \app\controller\DefaultController)->message404('Erro 404','Página não encontrada!' , 404);
+            return;
+        }
+
+        call_user_func_array([
+            new $cont,
+            $ex[1]
+            ],
+            []
+        );
     }
 
     private function normalizeURI($arr)

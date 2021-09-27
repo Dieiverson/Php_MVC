@@ -1,0 +1,7 @@
+Passos para iniciar o projeto:
+1) Ter o composer instalado na maquina.
+2) Executar o composer init.
+3) Copiar esse projeto, com atenção. Toda a estrutura de rotas está pronta, no entanto
+é necessário se atentar em algumas coisas:
+HTACCESS - Deve ser configurado de acordo com o caminho.
+Config.php - Deve mudar as variáveis de acrodo com a configuração.
